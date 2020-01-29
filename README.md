@@ -7,3 +7,6 @@ The task was completed on 28/01/2020 @ 13:33
 
 
 <h2>Week Two - Attempt 2!</h2>
+[![Build Status](https://travis-ci.org/struanxyz/sem2.svg?branch=master)](https://travis-ci.org/struanxyz/sem2)
+
+build error at the moment.
