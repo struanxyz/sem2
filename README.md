@@ -20,3 +20,11 @@ build error at the moment.
 - Master Build Status [![Build Status](https://travis-ci.org/struanxyz/sem2.svg?branch=master)](https://travis-ci.org/struanxyz/sem2)
 - License [![LICENSE](https://img.shields.io/github/license/struanxyz/sem2.svg?style=flat-square)](https://github.com/struanxyz/sem2/blob/master/LICENSE)
 - Release [![Releases](https://img.shields.io/github/release/struanxyz/sem2/all.svg?style=flat-square)](https://github.com/struanxyz/sem2/releases)
+
+
+# Software Engineering Methods Develop
+
+- Master Build Status [![Build Status](https://travis-ci.org/kevin-chalmers/sem.svg?branch=master)](https://travis-ci.org/kevin-chalmers/sem)
+- Develop Build Status [![Build Status](https://travis-ci.org/kevin-chalmers/sem.svg?branch=develop)](https://travis-ci.org/kevin-chalmers/sem)
+- License [![LICENSE](https://img.shields.io/github/license/kevin-chalmers/sem.svg?style=flat-square)](https://github.com/kevin-chalmers/sem/blob/master/LICENSE)
+- Release [![Releases](https://img.shields.io/github/release/kevin-chalmers/sem/all.svg?style=flat-square)](https://github.com/kevin-chalmers/sem/releases)
