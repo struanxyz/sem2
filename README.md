@@ -11,9 +11,9 @@ The task was completed on 28/01/2020 @ 13:33
 
 build error at the moment.
 
-[![LICENSE](https://img.shields.io/github/license/<github-username>/sem.svg?style=flat-square)](https://github.com/<struanxyz>/sem/blob/master/LICENSE)
+[![LICENSE](https://img.shields.io/github/license/struanxyz/sem.svg?style=flat-square)](https://github.com/<struanxyz>/sem/blob/master/LICENSE)
 
-[![Releases](https://img.shields.io/github/release/<github-username>/sem/all.svg?style=flat-square)](https://github.com/<github-username>/sem/releases)
+[![Releases](https://img.shields.io/github/release/struanxyz/sem/all.svg?style=flat-square)](https://github.com/<github-username>/sem/releases)
 
 # Software Engineering Methods
 
