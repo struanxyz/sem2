@@ -20,3 +20,5 @@ build error at the moment.
 - Master Build Status [![Build Status](https://travis-ci.org/struanxyz/sem2.svg?branch=master)](https://travis-ci.org/struanxyz/sem2)
 - License [![LICENSE](https://img.shields.io/github/license/struanxyz/sem2.svg?style=flat-square)](https://github.com/struanxyz/sem2/blob/master/LICENSE)
 - Release [![Releases](https://img.shields.io/github/release/struanxyz/sem2/all.svg?style=flat-square)](https://github.com/struanxyz/sem2/releases)
+
+<h2>Week Three - Attempt 1!</h2>
