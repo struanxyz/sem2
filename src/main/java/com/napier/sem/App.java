@@ -4,6 +4,32 @@ import java.sql.*;
 
 public class App
 {
+    public static void main(String[] args)
+    {
+        // Create new Application
+        App a = new App();
+
+        // Connect to database
+        a.connect();
+
+        // Get Employee
+        //Employee emp = a.getEmployee(255530);
+
+        // Display results
+        //a.displayEmployee(emp);
+
+        // Extract employee salary information
+        ArrayList<Employee> employees = a.getAllSalaries();
+
+        // Test the size of the returned data - should be 240124
+        System.out.println(employees.size());
+
+        a.printSalaries(employees);
+
+        // Disconnect from database
+        a.disconnect();
+    }
+
     /**
      * Connection to MySQL database.
      */
@@ -156,20 +182,21 @@ public class App
         }
     }
 
-    public static void main(String[] args)
+    /**
+     * Prints a list of employees.
+     * @param employees The list of employees to print.
+     */
+    public void printSalaries(ArrayList<Employee> employees)
     {
-        // Create new Application
-        App a = new App();
-
-        // Connect to database
-        a.connect();
-        // Extract employee salary information
-        ArrayList<Employee> employees = a.getAllSalaries();
-
-        // Test the size of the returned data - should be 240124
-        System.out.println(employees.size());
-
-        // Disconnect from database
-        a.disconnect();
+        // Print header
+        System.out.println(String.format("%-10s %-15s %-20s %-8s", "Emp No", "First Name", "Last Name", "Salary"));
+        // Loop over all employees in the list
+        for (Employee emp : employees)
+        {
+            String emp_string =
+                    String.format("%-10s %-15s %-20s %-8s",
+                            emp.emp_no, emp.first_name, emp.last_name, emp.salary);
+            System.out.println(emp_string);
+        }
     }
 }
