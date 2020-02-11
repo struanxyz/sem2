@@ -1,0 +1,20 @@
+@startuml
+
+actor HR as "Department Manager"
+
+rectangle Database
+
+rectangle "HR System" {
+    usecase UC4 as "Get salaries
+    of employees
+    of department
+    manager"
+
+    usecase UCa as "Print salaries"
+
+    HR - UC4
+    UC4 ..> UCa : include
+    UC4 - Database
+}
+
+@enduml

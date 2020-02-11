@@ -1,0 +1,20 @@
+@startuml
+
+actor HR as "HR Advisor"
+
+rectangle Database
+
+rectangle "HR System" {
+    usecase UC4 as "Search Employee number
+    attempt to delete
+    details"
+
+    usecase UCa as "Details successfully deleted,
+    company compliant with dpa"
+
+    HR - UC4
+    UC4 ..> UCa : include
+    UC4 - Database
+}
+
+@enduml
