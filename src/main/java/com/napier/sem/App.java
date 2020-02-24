@@ -212,9 +212,9 @@ public class App {
     public Department getDepartment(String dept_no) {
         return null;
     }
-
+    /*
     public ArrayList<Employee> getSalariesByDepartment(Department dept){
         // Need to finish this 
     }
-
+ */
 }
