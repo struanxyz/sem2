@@ -209,12 +209,63 @@ public class App {
         }
     }
 
-    public Department getDepartment(String dept_no) {
+    public Department getDepartment(String dept_name) {
+        try {
+            // Create SQL statement
+            Statement stmtDept = con.createStatement();
+
+            // Create string for SQL statement
+            String qryDept =
+                    "SELECT d.dept_no AS 'dept_no', dm.emp_no AS 'emp_no'"
+                            + "FROM departments d"
+                            + "JOIN dept_manager dm"
+                            + "WHERE dm.dept_name LIKE " + dept_name
+                            + "LIMIT 0,1";
+
+            // Execute Dept SQL statement
+            ResultSet rsetDept = stmtDept.executeQuery(qryDept);
+
+            // Return new employee if valid.
+            // Check one is returned
+            if (rsetDept.next()) {
+                Department dept = new Department();
+                dept.dept_no = rsetDept.getString("dept_no");
+                dept.dept_name = dept_name;
+
+                Statement stmtManager = con.createStatement();
+
+                //Execute Manager Query
+                String qryManager =
+                        "SELECT first_name, last_name, salary"
+                                + "FROM employees JOIN salaries"
+                                + "WHERE emp_no = " + rsetDept.getString("emp_no")
+                                + "LIMIT 0,1";
+
+                // Execute Dept SQL statement
+                ResultSet rsetManager = stmtDept.executeQuery(qryManager);
+
+                Employee manager = new Employee();
+                manager.dept = dept;
+                manager.emp_no = rsetDept.getInt("emp_no");
+                manager.salary = rsetManager.getInt("salary");
+                manager.first_name = rsetManager.getString("first_name");
+                manager.last_name = rsetManager.getString("last_name");
+
+                //Set Department's manager
+                dept.manager = manager;
+
+                return dept;
+            } else
+                return null;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get employee details");
+            return null;
+        }
+    }
+
+    public ArrayList<Employee> getSalariesByDepartment(Department dept) {
+        // Need to finish this
         return null;
     }
-    /*
-    public ArrayList<Employee> getSalariesByDepartment(Department dept){
-        // Need to finish this 
-    }
- */
 }
